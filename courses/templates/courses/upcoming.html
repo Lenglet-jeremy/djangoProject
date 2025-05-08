@@ -1,0 +1,9 @@
+<h1>Prochains cours</h1>
+<ul>
+  {% for slot in slots %}
+    <li>{{ slot.course.name }} - {{ slot.start_datetime }} (Coach : {{ slot.course.coach }})</li>
+  {% empty %}
+    <li>Aucun cours à venir.</li>
+  {% endfor %}
+</ul>
+
